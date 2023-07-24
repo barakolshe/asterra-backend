@@ -12,11 +12,7 @@ app.listen(SERVER_PORT, () => {
   console.log("Server listens on 8000");
 });
 
-const corsOptions: { origin: boolean } = {
-  origin: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan("common"));
